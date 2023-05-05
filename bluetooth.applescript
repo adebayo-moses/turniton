@@ -1,3 +1,13 @@
+if not (Bluetooth is on) then
+```
+Instead of this:
+```
+if not Bluetooth is on then
+```
+
+Here's the updated script:
+
+```
 tell application "System Events"
  --activate Bluetooth if it's disabled
  if not (Bluetooth is on) then
@@ -22,5 +32,5 @@ tell application "System Events"
 end tell
 
 tell application "System Preferences"
- reveal anchor "keyboardTab" of pane "com.apple.preference.keyboard"
+ reveal anchor "keyboard" of pane "com.apple.preference.keyboard"
 end tell
